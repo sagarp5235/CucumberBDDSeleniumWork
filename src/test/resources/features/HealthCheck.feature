@@ -9,4 +9,5 @@ And user navigated to home page
 When user search for "mobile"
 Then search result is displayed "mobile"
 And user click on any product
-Then procuct descrption is open and browser is closed
+Then procuct descrption is opened 
+And  browser is closed

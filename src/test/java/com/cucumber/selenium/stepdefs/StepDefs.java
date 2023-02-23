@@ -64,11 +64,16 @@ public class StepDefs {
 
 
 
-		@Then("procuct descrption is open and browser is closed")
+		@Then("procuct descrption is opened")
 		public void procuct_descrption_is_open_and_browser_is_closed() {
 			productDescriptionPageModel.openProductDescription();
 			productDescriptionPageModel.closeBrowser();
 
+		}
+		
+		@Then("browser is closed")
+		public void browser_is_closed() {
+			productDescriptionPageModel.closeBrowser();
 		}
 
 
