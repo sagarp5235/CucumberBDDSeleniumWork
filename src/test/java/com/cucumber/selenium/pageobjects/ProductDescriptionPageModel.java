@@ -17,6 +17,8 @@ public class ProductDescriptionPageModel {
 	WebDriver driver;
 	WebDriverWait wait;
 	
+	private By addToCartBtn = By.xpath("//input[@id='add-to-cart-button']");
+	
 	public ProductDescriptionPageModel(WebDriver driver, WebDriverWait wait){
 		this.driver = driver;
 		this.wait = wait;
@@ -27,23 +29,26 @@ public class ProductDescriptionPageModel {
 		Set<String> handles = driver.getWindowHandles();
 		Iterator<String> iterator = handles.iterator();
 		String original = iterator.next();
-		logger.info("On the searrch result page");
+		logger.info("On the search result page");
 		String prodDescription= iterator.next();
 		logger.info("Switching to product description tab");
 		driver.switchTo().window(prodDescription);
-		WebElement productTitle = driver.findElement(By.id("productTitle"));
+		WebElement productTitle = driver.findElement(By.xpath("//span[@id='productTitle']"));
 		logger.info("Validating product description");
         Assert.assertEquals("Product Title",true,productTitle.isDisplayed());
         logger.info("product descrption validation passed");
-        driver.close();
-        logger.info("closing product descrption tab");
-        driver.switchTo().window(original);
-        logger.info("Switching to search result page");
 	}
 	
-	public void closeBrowser() {
-		logger.info("closing browser");
-		driver.quit();
+	public void addToCart() throws InterruptedException {
+		
+		logger.info("Adding product to shopping cart");
+		driver.findElement(addToCartBtn);
+		logger.info("validating product is added to cart");
+		Thread.sleep(2000);
+		driver.close();
+		
 	}
+	
+
 	
 }

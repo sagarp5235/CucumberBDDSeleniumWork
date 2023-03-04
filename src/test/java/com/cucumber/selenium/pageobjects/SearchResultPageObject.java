@@ -18,7 +18,6 @@ public class SearchResultPageObject {
 		this.driver = driver;
 		this.wait = wait;
 	}
-	
 	public void validateSearchPage(String product) {
 		logger.info("validating the search result page");
 		Assert.assertEquals("Error loading search results", "Amazon.in : "+product, driver.getTitle());
@@ -26,7 +25,7 @@ public class SearchResultPageObject {
 	}
 	
 	public void productClickOperation() {
-		logger.info("Performing click operation");
+		logger.info("clicking on the product");
 		driver.findElement(productToClick).click();
 		
 	}
