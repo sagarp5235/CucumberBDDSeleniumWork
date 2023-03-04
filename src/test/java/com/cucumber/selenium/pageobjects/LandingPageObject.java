@@ -15,8 +15,8 @@ public class LandingPageObject {
 	private WebDriver driver;
 	private WebDriverWait wait;
 	
-	private By searchBoxElement = By.xpath("//input[@id='twotabsearchtextbox']");
-	private By searchButtonElement = By.xpath("//input[@id='nav-search-submit-button']");
+	private By searchBoxElement = By.xpath("//input[@id='twotabsearchtextbox']"); //locator for search box on home page
+	private By searchButtonElement = By.xpath("//input[@id='nav-search-submit-button']"); //locator for search button.
 	
 	
 	public LandingPageObject(WebDriver driver, WebDriverWait wait) {

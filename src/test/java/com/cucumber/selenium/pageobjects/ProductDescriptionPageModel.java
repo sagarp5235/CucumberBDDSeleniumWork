@@ -37,6 +37,8 @@ public class ProductDescriptionPageModel {
 		logger.info("Validating product description");
         Assert.assertEquals("Product Title",true,productTitle.isDisplayed());
         logger.info("product descrption validation passed");
+        driver.close();
+        driver.switchTo().window(original);
 	}
 	
 	public void addToCart() throws InterruptedException {

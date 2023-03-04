@@ -7,7 +7,7 @@ Scenario: User is able to open the application and able to perform a search oper
 Given user opened browser
 And user navigated to home page
 When user search for "mobile"
-Then search result is displayed "mobiles"
+Then search result is displayed "mobile"
 And user click on any product
 Then procuct descrption is opened
 
@@ -29,7 +29,7 @@ When user search for "mobile"
 Then search result is displayed "mobile"
 And user click on any product
 Then procuct descrption is opened
-And user add product to shopping cart
+And user add product to shopping cart		 #Logik implementation still pending.
 
 @MultiSearch
 Scenario: user is able to search for multiple products
@@ -43,3 +43,4 @@ Examples:
 |mobile			 |mobile				|
 |jeans			 |jeans			  	|
 |jacket			 |jacket				|
+#issue with multisearch screenshot capture working for first parameter only.

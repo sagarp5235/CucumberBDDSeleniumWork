@@ -40,9 +40,9 @@ public class StepDefs {
 		String browserName = WebDriverFactory.getBrowserName();
 		driver=WebDriverFactory.getWebDriverForBrowser(browserName);
 		wait = new WebDriverWait(driver, 20);
-		 landingPageObject = new LandingPageObject(driver, wait);
-		 searchResultPageObject = new SearchResultPageObject(driver, wait);
-		 productDescriptionPageModel = new ProductDescriptionPageModel(driver,wait);
+		landingPageObject = new LandingPageObject(driver, wait);
+		searchResultPageObject = new SearchResultPageObject(driver, wait);
+		productDescriptionPageModel = new ProductDescriptionPageModel(driver,wait);
 
 	 }
 	 
@@ -96,6 +96,7 @@ public class StepDefs {
 		public void user_search_for_product(String product) {
 			logger.info("search operation for :->"+product);
 		 landingPageObject.productSearch(product);
+		 scn.log("user searched for product name:->"+product);
 		}
 
 		@Then("search result is displayed for product {string}")
