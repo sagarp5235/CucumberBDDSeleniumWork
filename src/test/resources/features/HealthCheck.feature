@@ -44,3 +44,36 @@ Examples:
 |jeans			 |jeans			  	|
 |jacket			 |jacket				|
 #issue with multisearch screenshot capture working for first parameter only.
+
+@FooterOptionsTest
+	Scenario: Validate all footer links on landing page of the application
+		Given user navigated to home page
+    And user scroldown to the botton of the landing page of the application
+    When user is able to see 4 main options categories
+    And the categories having the option "Get to Know Us", "Connect with Us", "Make Money with Us" and "Let Us Help You"
+    Then under Get to Know Us category below options are visible
+    | About Us				|
+    | Careers					|
+    | Press Releases	|
+    | Amazon Science	|   
+		And under Connect with Us category below options are visible
+		| Facebook 	|
+		| Twitter		|
+		| Instagram	| 
+		And under Make Money with Us category below options are visible
+		| Sell on Amazon 								|
+		| Sell under Amazon Accelerator |
+		| Protect and Build Your Brand 	|
+		| Amazon Global Selling 				|
+		| Become an Affiliate 					|
+		| Fulfilment by Amazon 					|
+		| Advertise Your Products				|
+		| Amazon Pay on Merchants 			|
+		And under Let Us Help You category below options are visible
+		| COVID-19 and Amazon 			|
+		| Your Account 							|
+		| Returns Centre 						|
+		| 100% Purchase Protection 	|
+		| Amazon App Download 			|
+		| Amazon Assistant Download |
+		| Help 											|
