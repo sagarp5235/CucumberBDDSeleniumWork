@@ -1,0 +1,327 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "start_timestamp": "2023-03-13T13:27:17.315Z",
+        "before": [
+          {
+            "result": {
+              "duration": 11125022700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.cucumber.selenium.stepdefs.StepDefs.setup(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 49,
+        "name": "Validate all footer links on landing page of the application",
+        "description": "",
+        "id": "e-commerce-project-web-site-health-check;validate-all-footer-links-on-landing-page-of-the-application",
+        "after": [
+          {
+            "output": [
+              "No error, no screenshot captured"
+            ],
+            "result": {
+              "duration": 6995000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.cucumber.selenium.stepdefs.StepDefs.takeScreenshot(io.cucumber.java.Scenario)"
+            }
+          },
+          {
+            "output": [
+              "closed browser"
+            ],
+            "result": {
+              "duration": 862339800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.cucumber.selenium.stepdefs.StepDefs.closebrowser()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6489674300,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "user navigated to home page",
+            "match": {
+              "location": "com.cucumber.selenium.stepdefs.StepDefs.user_navigated_to_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 504785000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "user scroldown to the botton of the landing page of the application",
+            "match": {
+              "location": "com.cucumber.selenium.stepdefs.StepDefs.user_scroldown_to_the_botton_of_the_landing_page_of_the_application()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 184894000,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "user is able to see 4 main options categories",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 20
+                }
+              ],
+              "location": "com.cucumber.selenium.stepdefs.StepDefs.user_is_able_to_see_main_options_categories(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 194888600,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "the categories having the option \"Get to Know Us\", \"Connect with Us\", \"Make Money with Us\" and \"Let Us Help You\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Get to Know Us\"",
+                  "offset": 33
+                },
+                {
+                  "val": "\"Connect with Us\"",
+                  "offset": 51
+                },
+                {
+                  "val": "\"Make Money with Us\"",
+                  "offset": 70
+                },
+                {
+                  "val": "\"Let Us Help You\"",
+                  "offset": 95
+                }
+              ],
+              "location": "com.cucumber.selenium.stepdefs.StepDefs.the_categories_having_the_option_and(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 157910500,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "under Get to Know Us category below options are visible",
+            "match": {
+              "location": "com.cucumber.selenium.stepdefs.StepDefs.under_get_to_know_us_category_below_options_are_visible(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "About Us"
+                ]
+              },
+              {
+                "cells": [
+                  "Careers"
+                ]
+              },
+              {
+                "cells": [
+                  "Press Releases"
+                ]
+              },
+              {
+                "cells": [
+                  "Amazon Science"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 112954300,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "under Connect with Us category below options are visible",
+            "match": {
+              "location": "com.cucumber.selenium.stepdefs.StepDefs.under_connect_with_us_category_below_options_are_visible(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Facebook"
+                ]
+              },
+              {
+                "cells": [
+                  "Twitter"
+                ]
+              },
+              {
+                "cells": [
+                  "Instagram"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 281899400,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "under Make Money with Us category below options are visible",
+            "match": {
+              "location": "com.cucumber.selenium.stepdefs.StepDefs.under_make_money_with_us_category_below_options_are_visible(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Sell on Amazon"
+                ]
+              },
+              {
+                "cells": [
+                  "Sell under Amazon Accelerator"
+                ]
+              },
+              {
+                "cells": [
+                  "Protect and Build Your Brand"
+                ]
+              },
+              {
+                "cells": [
+                  "Amazon Global Selling"
+                ]
+              },
+              {
+                "cells": [
+                  "Become an Affiliate"
+                ]
+              },
+              {
+                "cells": [
+                  "Fulfilment by Amazon"
+                ]
+              },
+              {
+                "cells": [
+                  "Advertise Your Products"
+                ]
+              },
+              {
+                "cells": [
+                  "Amazon Pay on Merchants"
+                ]
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 267843800,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "under Let Us Help You category below options are visible",
+            "match": {
+              "location": "com.cucumber.selenium.stepdefs.StepDefs.under_let_us_help_you_category_below_options_are_visible(java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "COVID-19 and Amazon"
+                ]
+              },
+              {
+                "cells": [
+                  "Your Account"
+                ]
+              },
+              {
+                "cells": [
+                  "Returns Centre"
+                ]
+              },
+              {
+                "cells": [
+                  "100% Purchase Protection"
+                ]
+              },
+              {
+                "cells": [
+                  "Amazon App Download"
+                ]
+              },
+              {
+                "cells": [
+                  "Amazon Assistant Download"
+                ]
+              },
+              {
+                "cells": [
+                  "Help"
+                ]
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@ui"
+          },
+          {
+            "name": "@healthcheck"
+          },
+          {
+            "name": "@FooterOptionsTest"
+          }
+        ]
+      }
+    ],
+    "name": "E-commerce Project Web Site Health Check",
+    "description": "",
+    "id": "e-commerce-project-web-site-health-check",
+    "keyword": "Feature",
+    "uri": "classpath:features/HealthCheck.feature",
+    "tags": [
+      {
+        "name": "@ui",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      },
+      {
+        "name": "@healthcheck",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 5
+        }
+      }
+    ]
+  }
+]
