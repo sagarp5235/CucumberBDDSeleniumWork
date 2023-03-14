@@ -21,7 +21,10 @@ public class LandingPageObject {
 
 	private By searchBoxElement = By.xpath("//input[@id='twotabsearchtextbox']"); // locator for search box on home page
 	private By searchButtonElement = By.xpath("//input[@id='nav-search-submit-button']"); // locator for search button.
-
+    private By letUsHelpYouOptions = By.xpath("//div[text()='Let Us Help You']//parent::div//ul/li/a[text()]"); 
+    private By makeMoneyWithUsOptions = By.xpath("//div[text()='Make Money with Us']//parent::div//ul/li/a[text()]");
+    private By connectWithUsOptions = By.xpath("//div[text()='Connect with Us']//parent::div//ul/li/a[text()]");
+    private By getToKnowUsOptions = By.xpath("//div[text()='Get to Know Us']//parent::div//ul/li/a[text()]");
 	public LandingPageObject(WebDriver driver, WebDriverWait wait) {
 		this.driver = driver;
 		this.wait = wait;
@@ -79,8 +82,7 @@ public class LandingPageObject {
 	}
 
 	public void getToKnowUsCategoryValidation(List<String> expectedGettoKnowUsOptions) {
-		List<WebElement> gettoKnowUsOptionsActElement = driver
-				.findElements(By.xpath("//div[text()='Get to Know Us']//parent::div//ul/li/a[text()]"));
+		List<WebElement> gettoKnowUsOptionsActElement = driver.findElements(getToKnowUsOptions);
 		logger.info("validating options under Get to know us category");
 		for (int i = 0; i < expectedGettoKnowUsOptions.size(); i++) {
 			if (expectedGettoKnowUsOptions.get(i).equals(gettoKnowUsOptionsActElement.get(i).getText())) {
@@ -96,8 +98,7 @@ public class LandingPageObject {
 	}
 
 	public void connectWithUsCategoryValidation(List<String> expectedConnectWithUsOptions) {
-		List<WebElement> ConnectWithUsOptionsActElement = driver
-				.findElements(By.xpath("//div[text()='Connect with Us']//parent::div//ul/li/a[text()]"));
+		List<WebElement> ConnectWithUsOptionsActElement = driver.findElements(connectWithUsOptions);
 
 		for (int i = 0; i < expectedConnectWithUsOptions.size(); i++) {
 			if (expectedConnectWithUsOptions.get(i).equals(ConnectWithUsOptionsActElement.get(i).getText())) {
@@ -114,8 +115,7 @@ public class LandingPageObject {
 
 	public void makeMoneyWithUsCategoryValidation(List<String> expectedMakeMoneyWithUsOptions) {
 
-		List<WebElement> makeMoneyWithUsOptionsActElement = driver
-				.findElements(By.xpath("//div[text()='Make Money with Us']//parent::div//ul/li/a[text()]"));
+		List<WebElement> makeMoneyWithUsOptionsActElement = driver.findElements(makeMoneyWithUsOptions);
 
 		for (int i = 0; i < expectedMakeMoneyWithUsOptions.size(); i++) {
 			if (expectedMakeMoneyWithUsOptions.get(i).equals(makeMoneyWithUsOptionsActElement.get(i).getText())) {
@@ -130,8 +130,7 @@ public class LandingPageObject {
 	}
 
 	public void letUsHelpYouCategoryValidation(List<String> expectedLetUsHelpYou) {
-		List<WebElement> letUshelpYouOptionsActElement = driver
-				.findElements(By.xpath("//div[text()='Let Us Help You']//parent::div//ul/li/a[text()]"));
+		List<WebElement> letUshelpYouOptionsActElement = driver.findElements(letUsHelpYouOptions);
 
 		for (int i = 0; i < expectedLetUsHelpYou.size(); i++) {
 			if (expectedLetUsHelpYou.get(i).equals(letUshelpYouOptionsActElement.get(i).getText())) {
